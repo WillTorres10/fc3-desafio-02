@@ -1,0 +1,17 @@
+version: "3"
+services:
+  react:
+    container_name: ifc_03_desafio_2_react
+    build: ./spa-react
+    ports:
+    - 3001:3000
+    volumes:
+    - ./spa-react:/usr/app
+
+  nest_js:
+    container_name: ifc_03_desafio_2_nest_js
+    build: ./backend-nest
+    ports:
+    - 3000:3000
+    volumes:
+    - ./backend-nest:/usr/app
